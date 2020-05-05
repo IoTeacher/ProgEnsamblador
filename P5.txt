@@ -1,0 +1,21 @@
+;Adaptado a 255 por falta de memoria.
+n1 = 2
+n2 = 0
+n3 = 255
+	data Rc, n1
+	data Rb, n2
+	data Ra, n3
+	
+.begin:	
+	mov Rd, Rc
+	jnz .main
+	hlt
+	
+.main:
+	mov Rb, Rc
+	add Rc
+	mov Rb, Ra
+	mov Rd, Rc
+	cmp Rc
+	jnz .main
+	hlt

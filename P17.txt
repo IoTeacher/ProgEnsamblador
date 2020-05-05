@@ -1,0 +1,20 @@
+n1= 0
+n2 = 20
+
+	
+.begin:	
+	mov Ra, 0
+	mov Rb, n2
+	mov Rc, n1
+	jnz .main
+	hlt
+	
+.main:
+	inc Rc
+	mov Rb, Rc
+	add Ra
+	mov Rd, Ra
+	mov Rb, n2	
+	cmp Rc
+	jnz .main
+	hlt

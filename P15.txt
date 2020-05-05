@@ -1,0 +1,19 @@
+
+n1 = 144
+n2 = 12
+	data Rb, n1
+.begin:	
+	mov Ra, n2
+	mov Rd, Ra
+	jnz .main
+	hlt
+	
+.main:
+	mov Rb, Ra
+	mov Ra, n2
+	add Ra
+	mov Rb, n1
+	mov Rd, Ra
+	cmp Ra
+	jnz .main
+	hlt

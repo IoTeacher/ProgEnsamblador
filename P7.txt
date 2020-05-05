@@ -1,0 +1,28 @@
+;Adaptado a 255 por falta de memoria.
+n1 = 140 ;Numero dado
+n2 = 0
+	
+.begin:	
+	mov Ra, n1
+	mov Rd, Ra
+	jnz .main
+	hlt
+	
+.main:
+	mov Rb, 14
+	sub Ra
+	mov Rb, Ra
+	mov Rd, Rb
+	tst Ra
+	jz .yes
+	jn .no
+	jnz .main
+	
+	hlt
+	
+.yes:
+	mov Rd, 1
+	hlt
+.no:
+	mov Rd, 0
+	hlt

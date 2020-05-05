@@ -1,0 +1,17 @@
+n1= 9
+n2 = 43
+
+	data Rc, n1
+	data Rb, n2
+	
+.begin:	
+	mov Rd, Rc
+	jnz .main
+	hlt
+	
+.main:
+	inc Rc
+	mov Rd, Rc
+	cmp Rc
+	jnz .main
+	hlt

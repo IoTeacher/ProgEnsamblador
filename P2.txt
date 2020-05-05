@@ -1,0 +1,18 @@
+n1 = 7
+n2 = 51
+
+	data Rc, n1
+	data Rb, n2
+	
+.begin:	
+	mov Rd, Rc
+	jnz .main
+	hlt
+	
+.main:
+	inc Rc
+	inc Rc
+	mov Rd, Rc
+	cmp Rc
+	jnz .main
+	hlt	
